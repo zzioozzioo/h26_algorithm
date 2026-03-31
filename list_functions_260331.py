@@ -2,10 +2,18 @@ def getIndex(num_list, target):
     return num_list.index(target)
 
 def getMax(num_list):
-    return max(num_list)
+    max = num_list[0]
+    for num in num_list:
+        if num > max:
+            max = num
+    return max
 
 def getMin(num_list):
-    return min(num_list)
+    min = num_list[0]
+    for num in num_list:
+        if num < min:
+            min = num
+    return min
 
 def countGT(num_list, target):
     count = 0
@@ -16,10 +24,14 @@ def countGT(num_list, target):
     return count
 
 def sumList(num_list):
-    return sum(num_list)
+    sum = 0
+    for num in num_list:
+        sum += num
+    return sum
 
 def swapList(num_list):
-    num_list.reverse()
+    for i in range(0, len(num_list)//2):
+        num_list[i], num_list[-(i+1)] = num_list[-(i+1)], num_list[i]
 
 
 number_list = [23, 45, 27, 11, 25, 65, 78]
