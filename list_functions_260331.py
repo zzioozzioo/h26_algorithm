@@ -30,8 +30,10 @@ def sumList(num_list):
     return sum
 
 def swapList(num_list):
-    for i in range(0, len(num_list)//2):
-        num_list[i], num_list[-(i+1)] = num_list[-(i+1)], num_list[i]
+    num_list[::] = num_list[::-1]
+    
+    # for i in range(0, len(num_list)//2):
+    #     num_list[i], num_list[-(i+1)] = num_list[-(i+1)], num_list[i]
 
 
 number_list = [23, 45, 27, 11, 25, 65, 78]
